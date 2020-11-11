@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @author LuisDaSilva
  *
  */
-public class elefantes {
+public class elefantesytela {
 
 	/**
 	 * @param args
@@ -20,28 +20,48 @@ public class elefantes {
 		Scanner sc = new Scanner(System.in);
 		int tela;
 		int i;
-		int suma = 0;
-		int elefante;
+		int suma;
+		int elefante = 0;
 		
-		//pregunto cuanto aguanta la tela
-		System.out.println("¿Cuanto Aguanta la tela?");
-		tela = sc.nextInt(); 
 		
-		for (i = 1; suma <= tela; i++) {
-			System.out.println("¿Cuanto pesa el elefante numero "+i);
-			elefante = sc.nextInt();
-			suma = suma + elefante;
-				
-		}
-		if (elefante == 0) {
-			System.out.println("La tela aguanta");
-		}
-		if (elefante != 0) {
-			System.out.println("No aguanta mas");
-		}
-	
+		 do {
+			//Pregunto cuanto aguanta la tela 
+			 System.out.println("Si desea salir introduzca '0'");
+			 System.out.println("Cuanto peso aguanta la tela?");
+			 tela = sc.nextInt();
+			 i = 0;
+			 suma = 0;
+			 
+			 //Condicionsl distinto de 0
+			 if (tela != 0) {
+				 do {
+					//Pregunto cuanto pesa los elefantes
+					 i++;
+					 System.out.println("Si desea salir introduzca '0'");
+					 System.out.println("Cuanto pesa el elefante numero "+i);
+					 elefante = sc.nextInt();
+					 
+					 //sumo y acumulo el peso de los elefantes
+					 suma = suma + elefante;
+					 
+					 //condicional si suma es mas que tela se rompe la tela
+					 if (suma > tela) {
+						 System.out.println("Ya no aguanta!");
+					 }
+					//condicional si colocase 0 para salir
+					 if (elefante == 0) {
+						 System.out.println("La tela aguanto!");
+						 //Coloco tela =-1 para que sea menor que suma
+						 tela = -1;
+					 }
+				 }while (suma <= tela);
+			 }
+			 
+			 
+		 }while (tela != 0 && elefante != 0);
+		 System.out.println("adios!");
+			 
 		
-
 	}
 
 }
