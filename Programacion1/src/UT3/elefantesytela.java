@@ -51,10 +51,9 @@ public class elefantesytela {
 					//condicional si colocase 0 para salir
 					 if (elefante == 0) {
 						 System.out.println("La tela aguanto!");
-						 //Coloco tela =-1 para que sea menor que suma
-						 tela = -1;
+						 
 					 }
-				 }while (suma <= tela);
+				 }while (suma <= tela && elefante != 0);
 			 }
 			 
 			 
