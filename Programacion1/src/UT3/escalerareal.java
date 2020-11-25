@@ -35,35 +35,36 @@ public class escalerareal {
 		//pedimos cartas
 		System.out.println("Hola,Coloque el numero y el palo de su mano");
 		do {
-			System.out.println("Carta 1 numero:");
+			System.out.println("Carta 1 numero: ('0' Para Salir)");
 			numero[0] = sc.nextInt();
-			System.out.println("Carta 1 palo: (Coloque la letra correspondiente para el palo)");
-			System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
-			p1 = sc.nextInt();
-			
-			System.out.println("Carta 2 numero:");
-			numero[1] = sc.nextInt();
-			System.out.println("Carta 2 palo: (Coloque la letra correspondiente para el palo)");
-			System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
-			p2 = sc.nextInt();
-			
-			System.out.println("Carta 3 numero:");
-			numero[2] = sc.nextInt();
-			System.out.println("Carta 3 palo: (Coloque la letra correspondiente para el palo)");
-			System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
-			p3 = sc.nextInt();
-			
-			System.out.println("Carta 4 numero:");
-			numero[3] = sc.nextInt();
-			System.out.println("Carta 4 palo: (Coloque la letra correspondiente para el palo)");
-			System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
-			p4 = sc.nextInt();
-			
-			//ordenamos de menor a mayor
-			Arrays.sort(numero);
-			
+
 			//condicional si 0 Salir
 			if (numero[0]!=0) {
+				System.out.println("Carta 1 palo: (Coloque la letra correspondiente para el palo)");
+				System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
+				p1 = sc.nextInt();
+				
+				System.out.println("Carta 2 numero:");
+				numero[1] = sc.nextInt();
+				System.out.println("Carta 2 palo: (Coloque la letra correspondiente para el palo)");
+				System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
+				p2 = sc.nextInt();
+				
+				System.out.println("Carta 3 numero:");
+				numero[2] = sc.nextInt();
+				System.out.println("Carta 3 palo: (Coloque la letra correspondiente para el palo)");
+				System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
+				p3 = sc.nextInt();
+				
+				System.out.println("Carta 4 numero:");
+				numero[3] = sc.nextInt();
+				System.out.println("Carta 4 palo: (Coloque la letra correspondiente para el palo)");
+				System.out.println("Picas:'1', Diamantes:'2', Treboles:'3', Corazones:'4'");
+				p4 = sc.nextInt();
+				
+				//ordenamos de menor a mayor
+				Arrays.sort(numero);
+			
 				//condicional que todos sean del mismo palo
 				if (p1==p2 && p2==p3 && p3==p4) {
 					//condicional (sin numeros negativos y maximo numero el 13)
@@ -74,14 +75,13 @@ public class escalerareal {
 							n1 = numero[i] - numero[i+1];
 							//condicional son escaleras entre los 2
 							if(n1==-1) {
-								System.out.println(numero[i]+" Escalera "+numero[i+1]);
 								escalera++;
 								//condicional para cuando las 4 cartas son escaleras de por si
 								if (escalera == 3) {
 									auxesca = numero[i] + 2;
 									//como la carta maxima es el 13 colocamos un 1 en caso de que se pase
 									if (auxesca<14) {
-										System.out.println("Escalera con "+auxesca);
+										
 									}
 									else {
 										System.out.println("Escalera con 1");
@@ -91,9 +91,7 @@ public class escalerareal {
 							}
 							//condicional cuando hay 1 hueco de 1 de diferencia entre 2 cartas
 							else if (n1==-2) {
-								System.out.println(numero[i]+" Falta 1 "+numero[i+1]);
 								auxcon = numero[i] + 1;
-								System.out.println("Escalera con "+auxcon);
 								con++;
 								//condicional en el caso de que haya mas de 1 hueco entre varias cartas EJ: 1-3 y 3-5
 								if (con>1) {
