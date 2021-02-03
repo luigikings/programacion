@@ -44,9 +44,9 @@ public class Biblioteca {
 			
 			if (opcion == 1) {
 				System.out.println("Dime el nombre de tu libro: ");
-				libro3.setTitulo(entrada.nextLine());
+				libro3.setTitulo(entrada.next());
 				System.out.println("Dime el Autor de tu libro: ");
-				libro3.setAutor(entrada.nextLine());
+				libro3.setAutor(entrada.next());
 				System.out.println("Dime el numero de Libros que tienes: ");
 				libro3.setNumEjemplares(entrada.nextInt());
 				System.out.println("Dime el numero de Ejemplares Prestados tienes: ");
