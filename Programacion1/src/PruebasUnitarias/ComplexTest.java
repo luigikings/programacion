@@ -25,10 +25,10 @@ class ComplexTest {
 	@Test
 	public void testRestar() {
 		//Declaramos 2 numeros complejos
-		Complex numA = new Complex(4,3);
-		Complex numB = new Complex(2,1);
+		Complex numA = new Complex(2,2);
+		Complex numB = new Complex(2,2);
 		//declaramos resultado esperado
-		Complex esperado = new Complex(2,2);
+		Complex esperado = new Complex(0,0);
 		//declaramos resultado obtenido
 		Complex obtenido = numA.restar(numB);
 		//assert para comprobar si esperado = obtenido
@@ -58,13 +58,13 @@ class ComplexTest {
 		//assert para comprobar si esperado = obtenido
 		assertEquals(esperado, obtenido);
 	}
-	@Test
+	@Test 
 	public void testDividir() {
 		//Declaramos 2 numeros complejos
-	    Complex numA = new Complex(1,2);
+	    Complex numA = new Complex(0,0);
 		Complex numB = new Complex(3,4);
 		//declaramos resultado esperado
-		Complex esperado = new Complex(0.44,0.08);
+		Complex esperado = new Complex(0,0);
 		//declaramos resultado obtenido
 		Complex obtenido = numA.dividir(numB);
 		//assert para comprobar si esperado = obtenido

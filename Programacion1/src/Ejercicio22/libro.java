@@ -32,13 +32,17 @@ public class libro {
 		}
 	}
 
-	public void devolver() {
+	public int devolver() {
 
 		if (numPrestados==0) {
 			System.out.println("Este libro no se a prestado, No se ha hecho la devolucion del mismo");
+			numPrestados = 0;
+			return numPrestados;
 		}else {
 			numPrestados--;
 			System.out.println("Devolucion con exito.");
+			numPrestados = 1;
+			return numPrestados;
 		}
 	}
 	

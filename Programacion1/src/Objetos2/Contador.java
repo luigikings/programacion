@@ -32,8 +32,9 @@ public class Contador {
 			this.cont=cont;
 		}
 	}
-	public void incrementar() {
+	public int incrementar() {
 		cont++;
+		return cont;
 	}
 	public void decrementar() {
 		cont--;
